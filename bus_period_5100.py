@@ -27,7 +27,7 @@ def find_period():
 schedule.every(1).seconds.do(find_period)
 
 count = 0
-# 900초 동안 반복 실행
+# 반복 실행
 while count < 2000:
     schedule.run_pending()
     time.sleep(1)
