@@ -22,22 +22,24 @@ def find_period():
     #버스 정보 존재 시 시간 입력
     if "정상적으로 처리되었습니다" in station:
         bus_time.append(time.ctime())
+        print("there is info at :", time.ctime(), "(process :", round((count+1)/ 20, 2), "%)")
+    else:
+        print("there is no info now (process :", round((count+1)/ 20, 2), "%)")
+
 
 # 1초마다 반복
 schedule.every(1).seconds.do(find_period)
 
 count = 0
-# 반복 실행
+# 2000초 동안 반복 실행
 while count < 2000:
     schedule.run_pending()
     time.sleep(1)
-    # 퍼센트로 진행률 출력
-    print("진행중..", round((count + 1) / 20, 2), "%")
-    count = count + 1
+    count += 1
 
 # 엑셀파일로 데이터 저장
 bus_time_data = {"time" : bus_time}
 
 bus_time_data = pd.DataFrame(bus_time_data)
-bus_time_data.to_excel(excel_writer="/Users/yang-jinyoung/Desktop/동아리 대항전/period_5100_3.xlsx")
-print("완료")
+bus_time_data.to_excel(excel_writer="/Users/yang-jinyoung/Desktop/동아리 대항전/period_5100_5.xlsx")
+print("complete!")
