@@ -1,0 +1,47 @@
+@font-face {
+    font-family: Pretendard;
+    src: url("PretendardVariable.woff2");
+}
+
+*{font-family: "Pretendard", serif;}
+
+ul{margin: 0; padding: 0;}
+
+li{list-style: none;}
+
+a{text-decoration:none; font-size:14px}
+
+.menu {
+    width: 100%;
+    overflow: hidden;
+}
+
+.menu > li {
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    background-color: #000000;
+}
+.menu a {
+    color: #fff;
+}
+.menu > li:hover {
+    background-color: #808080;
+    transition-duration: 0.5s;
+}
+
+.list {
+    width: 100%;
+    overflow: hidden;
+}
+.list > li {
+    width: 25%;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    background-color: #000000;
+}
+.list a{
+    color:#fff
+}
