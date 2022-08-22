@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&display=swap");
+
+body {
+  background: url(대학휘장-01.jpg), url(대학휘장-01.jpg);
+  background-size: 140px, 140px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 17% 2%, 83% 2%;
+}
+
+h1 {
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+  font-size: 30pt;
+}
+* {
+  font-family: "Noto Sans KR", sans-serif;
+}
+ul {
+  margin: 1px;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.park {
+  background: url(park.jpg);
+  background-size: cover;
+}
+.pe {
+  background-image: url(pe.jpg);
+  background-size: cover;
+}
+.bio {
+  background-image: url(bio.jpg);
+  background-size: cover;
+}
+.menu {
+  width: 100%;
+}
+
+.menu > li {
+  width: 30%;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  line-height: 120px;
+  border-radius: 15px;
+  margin: 6px 1.5% 22px 1.5%;
+  border: 2px solid white;
+  box-shadow: 5px 6px 5px 0px;
+  display: block;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.menu > li:hover {
+  background-image: url(img_5.png);
+  transition-duration: 0.5s;
+}
+
+.list {
+  width: 100%;
+}
+.list > li {
+  width: 25%;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  background-color: #000000;
+}
+.list a {
+  color: #fff;
+  font-size: 20pt;
+}
+p {
+  text-align: center;
+  font-size: 30px;
+}
+
+.infolist {
+  width: 100%;
+}
+
+.infolist > li {
+  width: 25%;
+  float: left;
+  text-align: center;
+  line-height: 50x;
+  margin: 100px 0px;
+}
+
+.infolist a {
+  color: black;
+  font-size: 50pt;
+}
+.des {
+  margin: 19px 0px 45px 0px;
+  font-size: 30pt;
+}
