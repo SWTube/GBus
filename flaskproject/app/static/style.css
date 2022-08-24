@@ -65,7 +65,10 @@ li {
   background-image: url(img_5.png);
   transition-duration: 0.5s;
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
 .list {
   width: 100%;
 }

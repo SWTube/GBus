@@ -14,7 +14,7 @@ def index():
 
 
 
-@bp.route('/busstop/사색의광장/')
+@bp.route('/busstop/sa/')
 def sa():
     model = pickle.load(open('7000_regressor.pkl', 'rb'))
     # 인풋값 생성
@@ -89,7 +89,7 @@ def sa():
     except Exception as e:
         result7=False
     if(result7==False or result0==False or result5==False or result1==False):
-        return render_template('buspage/bus_info/bus_info.html',info_message='다시 정류장을 클릭하세요',nowtime=time.strftime("%H시%M분",time.localtime(time.time())),
+        return render_template('buspage/bus_info/bus_error.html',info_message='다시 정류장을 클릭하세요',nowtime=time.strftime("%H시%M분",time.localtime(time.time())),
         infoTime7="에러 발생",
         infoTime5="에러 발생",
         infoTime1="에러 발생",
@@ -104,7 +104,7 @@ def sa():
 
 
 
-@bp.route('/busstop/체육대학외대/')
+@bp.route('/busstop/pe/')
 def pe():
     model = pickle.load(open('7000_regressor.pkl', 'rb'))
     # 인풋값 생성
@@ -180,7 +180,7 @@ def pe():
     except Exception as e:
         result7=False
     if(result7==False or result0==False or result5==False or result1==False):
-        return render_template('buspage/bus_info/bus_info.html',info_message='다시 정류장을 클릭하세요',nowtime=time.strftime("%H시%M분",time.localtime(time.time())),
+        return render_template('buspage/bus_info/bus_error.html',info_message='다시 정류장을 클릭하세요',nowtime=time.strftime("%H시%M분",time.localtime(time.time())),
         infoTime7="에러 발생",
         infoTime5="에러 발생",
         infoTime1="에러 발생",
@@ -193,7 +193,7 @@ def pe():
         infoTime0=convertToStringTime(convertedHour2(result0,time.time()),convertedMinute2(result0,time.time()))
         )
 
-@bp.route('/busstop/생명과학대/')
+@bp.route('/busstop/bio/')
 def bio():
     model = pickle.load(open('7000_regressor.pkl', 'rb'))
     # 인풋값 생성
@@ -268,7 +268,7 @@ def bio():
     except Exception as e:
         result7=False
     if(result7==False or result0==False or result5==False or result1==False):
-        return render_template('buspage/bus_info/bus_info.html',info_message='다시 정류장을 클릭하세요',nowtime=time.strftime("%H시%M분",time.localtime(time.time())),
+        return render_template('buspage/bus_info/bus_error.html',info_message='다시 정류장을 클릭하세요',nowtime=time.strftime("%H시%M분",time.localtime(time.time())),
         infoTime7="에러 발생",
         infoTime5="에러 발생",
         infoTime1="에러 발생",
@@ -279,6 +279,7 @@ def bio():
         infoTime5=convertToStringTime(convertedHour1(result5,time.time()),convertedMinute1(result5,time.time())),
         infoTime1=convertToStringTime(convertedHour1(result1,time.time()),convertedMinute1(result1,time.time())),
         infoTime0=convertToStringTime(convertedHour1(result0,time.time()),convertedMinute1(result0,time.time()))
+
         )
 
 
