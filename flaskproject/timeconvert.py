@@ -37,4 +37,3 @@ def convertedMinute2(infoBusNum,currentTime=time.time()):#몇분 도착예정인
 def convertToStringTime(hour,min):
     stringTime = "{0}시{1}분".format(int(hour),int(min))
     return stringTime
-
