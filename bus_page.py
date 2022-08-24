@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template
 from getInput import *
 from timeconvert import *
 import pickle
@@ -261,15 +261,6 @@ def indexaaa():
     infoTime1=convertToStringTime(convertedHour1(result1),convertedMinute1(result1)),
     infoTime0=convertToStringTime(convertedHour1(result0),convertedMinute1(result0))
     )
-
-
-
-
-
-
-
-
-
 
 
 if __name__ == "__main__":

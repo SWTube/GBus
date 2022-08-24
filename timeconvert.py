@@ -1,7 +1,5 @@
 import time
 
-
-
 def convertedHour(infoBusNum,currentTime=time.time()): #몇시 도착예정인지
     arriveSec=currentTime+int(infoBusNum)
     arriveHour = time.strftime("%H",time.localtime(arriveSec))
@@ -32,9 +30,6 @@ def convertedMinute2(infoBusNum,currentTime=time.time()):#몇분 도착예정인
     arriveMin = time.strftime("%M",time.localtime(arriveSec))
     return arriveMin
 
-
-
 def convertToStringTime(hour,min):
     stringTime = "{0}시{1}분".format(int(hour),int(min))
     return stringTime
-
