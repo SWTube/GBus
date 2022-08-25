@@ -73,21 +73,7 @@ def sa():
         result1=False
     except Exception as e:
         result1=False
-    
-    
-    model = pickle.load(open('7000_regressor.pkl', 'rb'))
-    # 인풋값 생성
-    pBus=Bus(p7000)
-    try:
-        soup=pBus.repet()
-        pBus.bus_time.append([soup.queryTime.text,pBus.current_buses()])
-        data=pd.DataFrame(pBus.bus_time,columns=['시간','운행중인 다른 버스들의 위치'])
-        inputVal=trim_data(data,7000)
-        result7 = model.predict(inputVal)
-    except requests.Timeout as err:
-        result7=False
-    except Exception as e:
-        result7=False
+
     if(result7==False or result0==False or result5==False or result1==False):
         return render_template('buspage/bus_info/bus_error.html',info_message='다시 정류장을 클릭하세요',
         infoTime7="에러 발생",
@@ -106,20 +92,7 @@ def sa():
 
 @bp.route('/busstop/pe/')
 def pe():
-    model = pickle.load(open('7000_regressor.pkl', 'rb'))
-    # 인풋값 생성
-    pBus=Bus(p7000)
-    try:
-        soup=pBus.repet()
-        pBus.bus_time.append([soup.queryTime.text,pBus.current_buses()])
-        data=pd.DataFrame(pBus.bus_time,columns=['시간','운행중인 다른 버스들의 위치'])
-        inputVal=trim_data(data,7000)
-        result7 = model.predict(inputVal)
-    except requests.Timeout as err:
-        result7=False
-    except Exception as e:
-        result7=False
-    
+   
     model = pickle.load(open('5100_regressor.pkl', 'rb'))
     # 인풋값 생성
     pBus=Bus(p5100)
@@ -254,19 +227,7 @@ def bio():
         result1=False
     
     
-    model = pickle.load(open('7000_regressor.pkl', 'rb'))
-    # 인풋값 생성
-    pBus=Bus(p7000)
-    try:
-        soup=pBus.repet()
-        pBus.bus_time.append([soup.queryTime.text,pBus.current_buses()])
-        data=pd.DataFrame(pBus.bus_time,columns=['시간','운행중인 다른 버스들의 위치'])
-        inputVal=trim_data(data,7000)
-        result7 = model.predict(inputVal)
-    except requests.Timeout as err:
-        result7=False
-    except Exception as e:
-        result7=False
+
     if(result7==False or result0==False or result5==False or result1==False):
         return render_template('buspage/bus_info/bus_error.html',info_message='다시 정류장을 클릭하세요',
         infoTime7="에러 발생",
